@@ -1,0 +1,36 @@
+<%- include ('partials/header'); %>
+   
+        <header class="jumbotron">
+            <div class="container">
+                <h1>NewsNow</h1>
+                <h3>Your curated list of news articles from around the world!</h3>
+            </div>
+            
+            <a href="news/new" class="btn btn-primary btn-lg">Add news article. </a>
+
+        </header>
+
+        <div class="row" style="display: flex; flex-wrap: wrap;"> 
+            <% campground.forEach(function(campgrounds){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class= "thumbnail" >
+                        <img src = "<%= campgrounds.image %>" alt="camp image" class="img-responsive" style="width: 100%; height: 200px">
+                        <div class="figure-caption">
+                            <h4> <%= campgrounds.name %> </h4>
+                        </div>
+                        <p>
+                            <a href="/news/<%= campgrounds._id%>" class="btn btn-primary">
+                                More info
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            <% }); %>
+            
+        </div>
+
+      
+
+
+<%- include ('partials/footer'); %>

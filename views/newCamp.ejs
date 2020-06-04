@@ -1,0 +1,12 @@
+<%- include("partials/header"); %>
+
+<h1>Add new camp ground</h1>
+
+<form action="/news" method="POST">
+    <input class="form-control" type="text" name="name" placeholder="name">
+    <input class="form-control" type="text" name="image" placeholder="image url">
+    <input class="form-control" type="text" name="description" placeholder="Content">
+    <button class="btn btn-lg btn-primary  ">Submit</button>
+</form>
+
+<%- include("partials/footer"); %>

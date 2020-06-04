@@ -1,0 +1,15 @@
+<%- include ('./partials/header'); %>
+
+<h1>
+    <%=campground.name%>
+</h1>
+<img src="<%=campground.image%>" style="width: 400px;height: 300px;" alt="photo">
+
+<br><br><br><br>
+
+<p style="line-height: 2;">
+    <%= campground.description%>
+</p>
+    
+
+<%- include ('./partials/footer'); %>
